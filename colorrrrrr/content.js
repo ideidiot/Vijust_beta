@@ -6,14 +6,14 @@
       <div id="cs-extension-popup">
         <div class="cs-header" id="cs-popupHeader">
           <div class="cs-title">
-            Vijsut
+            Vijust
           </div>
           <button id="cs-closePopupBtn" class="cs-close-btn">
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
           </button>
         </div>
   
-        <!-- 画面1: 選択画面 -->
+        <!-- S1: 選択画面 -->
         <div id="cs-screenSelect" class="cs-body">
           <p style="margin: 0 0 12px 0; font-size: 13px; color: #64748b;">見づらい文章をクリックして選択し、色や縁取りを調整します。</p>
           <button id="cs-startSelectionBtn" class="cs-btn-primary">
@@ -23,7 +23,7 @@
           <div id="cs-selectionStatus" class="cs-status-text cs-hidden">画面内の文字をクリックしてください...</div>
         </div>
   
-        <!-- 画面2: 編集画面 -->
+        <!-- S2: 編集画面 -->
         <div id="cs-screenEdit" class="cs-hidden">
           <div class="cs-body">
             <div class="cs-row">
