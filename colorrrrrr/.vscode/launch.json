@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ChromeExtensionDebug",
+            "type": "chrome",
+            "request": "launch",
+            "url": "about:blank",
+            "runtimeArgs": [
+                "--load-extension=${workspaceFolder}",
+                "--export-tagged-pdf",
+            ],
+            "userDataDir": "${workspaceFolder}/.vscode/chrome-profile",
+        }
+    ]
+}

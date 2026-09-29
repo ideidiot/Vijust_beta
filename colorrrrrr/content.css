@@ -1,0 +1,238 @@
+/* 選択モード時のカーソルとハイライト */
+body.cs-select-mode {
+  cursor: crosshair !important;
+}
+body.cs-select-mode *:hover {
+  outline: 2px dashed #3b82f6 !important;
+  outline-offset: 4px;
+  border-radius: 4px;
+  cursor: crosshair !important;
+}
+
+.cs-selected-element-highlight {
+  outline: 3px solid #10b981 !important;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ポップアップ本体 */
+#cs-extension-popup {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #334155;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#cs-extension-popup * {
+  box-sizing: border-box;
+}
+
+.cs-header {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  user-select: none;
+}
+
+.cs-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cs-close-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+.cs-close-btn:hover {
+  color: #475569;
+}
+
+.cs-body {
+  padding: 16px;
+}
+
+.cs-btn-primary {
+  width: 100%;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+.cs-btn-primary:hover {
+  background: #dbeafe;
+}
+
+.cs-status-text {
+  font-size: 12px;
+  text-align: center;
+  color: #2563eb;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.cs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cs-label {
+  font-weight: 500;
+  color: #334155;
+}
+
+.cs-hex-code {
+  font-family: monospace;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* トグルスイッチ */
+.cs-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+.cs-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.cs-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+.cs-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+input:checked + .cs-slider {
+  background-color: #3b82f6;
+}
+input:checked + .cs-slider:before {
+  transform: translateX(16px);
+}
+
+/* カラー編集エリア */
+.cs-picker-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cs-preview-box {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e2e8f0;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.cs-preview-box:hover {
+  transform: scale(1.05);
+}
+
+.cs-color-input-wrapper {
+  position: relative;
+  height: 48px;
+  flex-grow: 1;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  overflow: hidden;
+  background: #f8fafc;
+}
+.cs-color-input-wrapper:hover {
+  border-color: #3b82f6;
+}
+.cs-color-input-wrapper input[type="color"] {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.cs-footer {
+  background: #f8fafc;
+  padding: 12px;
+  border-top: 1px solid #e2e8f0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.cs-btn-secondary {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.cs-btn-secondary:hover {
+  background: #f1f5f9;
+}
+.cs-hidden {
+  display: none !important;
+}
