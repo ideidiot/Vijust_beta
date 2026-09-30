@@ -1,2 +1,4 @@
-# ChangingColorsOnEveryWebsite
-何年かかけて完成させたいやつ
+# Vijust_BetaEdition
+Vijust_beta
+岡山操山高校総合的な学習の時間のあれ　すなわち未来航路
+ReadMeってどうかけば良いんだよ
